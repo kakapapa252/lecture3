@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MY NOTES</title>
+	<style type="text/css">
+		button:hover {
+			color: lightblue;
+			background-color: black;
+		}
+	</style>
+</head>
+<body>
+	<h1 style="color:magenta ; size: 24px">NOTES</h1>
+	<ul>
+		{% for note in notes %}
+			<li>{{note}}</li>
+		{% endfor %}
+	</ul>
+	<form action="{{ url_for('notes') }}" method="post">
+		<input type="text" name="note" placeholder="Your Note...">
+		<button style="background: pink; width: 200;height: 150">SAVE NOTE</button>
+	</form>
+</body>
+</html>
